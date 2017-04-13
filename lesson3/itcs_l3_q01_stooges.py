@@ -1,1 +1,0 @@
-stooges = ['Moe', 'Larry', 'Curly']
