@@ -5,10 +5,8 @@
 # nbuckets empty buckets.
 
 def make_hashtable(nbuckets):
-    counter = 0
     buckets = []
-    while counter < nbuckets:
+    for counter in range(0,nbuckets):
         buckets.append([])
-        counter = counter + 1
     return buckets
 
