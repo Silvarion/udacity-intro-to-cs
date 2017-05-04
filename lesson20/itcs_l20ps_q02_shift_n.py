@@ -4,11 +4,15 @@
 #negative or zero.
 
 def shift_n_letters(letter, n):
-    if ord(letter) + n <= ord('z'):
-        return chr(ord(letter) + n)
+    if ord(letter) + n < ord('a'):
+        return chr(ord(letter) + n + 26)
+    elif ord(letter) + n > ord('z'):
+        return chr(ord(letter) + n - 26)
     else:
-        return chr((ord(letter) + n) - 26)
+        return chr(ord(letter) + n)
 
+print shift_n_letters('a',-1)
+#>>> z
 print shift_n_letters('s', 1)
 #>>> t
 print shift_n_letters('s', 2)
